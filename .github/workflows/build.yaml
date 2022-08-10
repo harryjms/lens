@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.build-for }}
       cancel-in-progress: true
     strategy:
       matrix:
